@@ -1,0 +1,98 @@
+.wrapper {
+    width: 100%;
+    height: calc(100vh - 70px);
+    display: flex;
+}
+
+.left {
+    width: 65%;
+    height: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: #FFE9DD;
+}
+
+.right {
+    width: 35%;
+    height: 100%;
+}
+
+.detail {
+    width: 80%;
+    padding-bottom: 100px;
+
+}
+
+.head {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 48px;
+    color: #C57B57;
+    line-height: 50px;
+}
+
+.subHead {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    color: #C57B57;
+    line-height: 40px;
+}
+
+.loginBtn, .submitBtn {
+    width: 120px;
+    height: 40px;
+    color: white;
+    font-weight: bold;
+    display: flex;
+    text-decoration: none;
+    justify-content: center;
+    align-items: center;
+    background-color: #C57B57;
+    border-radius: 20px;
+    cursor: pointer;
+    margin-top: 30px;
+}
+
+.rightWrapper{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 80%;
+}
+
+.subsubHead {
+    font-size: medium;
+    color: #313030;
+    margin-bottom: 30px;
+}
+
+.email, .password {
+    display: block;
+    height: 40px;
+    width: 60%;
+    outline: none;
+    border: 1px solid gainsboro;
+    border-radius: 20px;
+    padding: 0 15px;
+    background-color: white !important;
+    margin-bottom: 20px;
+    font-weight: bold;
+    color: gray;
+}
+
+.submitBtn {
+    width: 60%;
+}
+
+.forgot{
+    color: gray;
+    font-size: medium;
+    text-align: center;
+    margin-top: 10px;
+}

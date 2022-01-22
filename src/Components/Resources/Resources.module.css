@@ -1,0 +1,72 @@
+.wrapper{
+    width: 100%;
+    height: calc(100vh - 70px);
+    background-color: #FFE9DD;
+    padding: 50px 100px;
+    overflow: auto;
+}
+.head{
+    font-size: 56px;
+    font-weight: bold;
+}
+
+.subHead{
+    font-size: 20px;
+}
+
+
+.videos{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 40px;
+    align-items: center;
+}
+
+.video{
+    min-width: 300px;
+    width: 300px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.img{
+    width: 100%;
+}
+.video .subHead{
+    text-align: center;
+    font-size: medium;
+    margin-top: 10px;
+
+}
+
+.h2{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    height: 400px;
+    margin-top: 50px;
+}
+
+.left,.right{
+    width: 50%;
+}
+
+.pt{
+    border-bottom: 2px dotted;
+    font-size: 20px;
+    margin-top: 30px;
+    width: 350px;
+    text-align: center;
+}
+.left{
+    margin-top: 50px;
+}
+
+.right{
+    background-image: url('../../Assets/Saly-16.png');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    height: 400px;
+    background-position: left;
+}
