@@ -53,7 +53,7 @@ function Homepage() {
         </div>
         <div className={style.h3}>
             <div className={style.head}>You know the reasons <br /> Get Started</div>
-            <Link to="/check">
+            <Link to="/dashboard">
                 <div className={style.btn}>
                     Let's Go
                 </div>

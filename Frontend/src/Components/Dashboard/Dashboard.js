@@ -27,19 +27,19 @@ function Dashboard() {
 
     async function predict(img) {
         let prevModels = null
-         setModels(models=>{
-             prevModels = models;
-             return models
-         })
-         if (!prevModels) return
-         const { pose, posenetOutput } = await prevModels.estimatePose(img);
-         const prediction = await prevModels.predict(posenetOutput);
-         let maxPrediction = 0;
-         setMaxPredictions(maxPredictions=>{
-             maxPrediction = maxPredictions;
-             return maxPredictions
-         })
-         for (let i = 0; i < maxPrediction; i++) {
+        setModels(models => {
+            prevModels = models;
+            return models
+        })
+        if (!prevModels) return
+        const { pose, posenetOutput } = await prevModels.estimatePose(img);
+        const prediction = await prevModels.predict(posenetOutput);
+        let maxPrediction = 0;
+        setMaxPredictions(maxPredictions => {
+            maxPrediction = maxPredictions;
+            return maxPredictions
+        })
+        for (let i = 0; i < maxPrediction; i++) {
             setScore([prediction[1].probability.toFixed(2), prediction[0].probability.toFixed(2)])
             if (prediction[1].probability.toFixed(2) > 0.90) {
                 console.log("bad")
@@ -61,6 +61,8 @@ function Dashboard() {
         predict(camera.current.canvas)
     }
 
+    
+
     useEffect(async () => {
         const modelURL = URL + "model.json";
         const metadataURL = URL + "metadata.json";
@@ -70,8 +72,10 @@ function Dashboard() {
         setMaxPredictions(maxPredictions)
         let intervel = setInterval(capture, 1000);
 
+
         return () => {
             clearInterval(intervel)
+
         }
     }, [])
 
@@ -86,9 +90,9 @@ function Dashboard() {
                 <img src={g1} className={style.g1} />
             </div>
             <div className={style.right}>
-                <Webcam audio={false} ref={camera} screenshotFormat="image/jpeg" videoConstraints={videoConstraints} width="500px"  />
+                <Webcam audio={false} ref={camera} screenshotFormat="image/jpeg" videoConstraints={videoConstraints} width="500px" />
                 {score.length > 0 ? <div className={style.score}>
-                    <div className={style.subHead} style={{marginRight:"50px"}}>
+                    <div className={style.subHead} style={{ marginRight: "50px" }}>
                         Correct Posture <br /> {parseInt(score[1] * 100)}%
                     </div>
                     <div className={style.subHead}>
