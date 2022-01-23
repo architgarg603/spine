@@ -1,0 +1,46 @@
+.wrapper{
+    width: 100%;
+    height: calc(100vh - 70px);
+    background-color: #FFE9DD;
+    padding-top: 30px;
+    padding-left: 100px;
+    overflow: auto;
+}
+.head{
+    font-size: 50px;
+    font-weight: bold;
+}
+
+.subHead{
+    font-size: 20px;
+    display: flex;
+}
+
+.img{
+    height: 200px;
+}
+
+.g1{
+    height: 300px;
+}
+
+.h1{
+    display: flex;
+}
+
+.left,.right{
+    width: 50%;
+
+}
+
+.right{
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+}
+
+.score{
+    display: flex;
+    margin-top: 20px;
+}

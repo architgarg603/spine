@@ -1,0 +1,32 @@
+.head{
+    position: relative;
+
+}
+
+.head::after{
+    content: ' ';
+    width: 120%;
+    height: 3px;
+    background-color: #C57B57;
+    bottom: 0;
+    left: -10%;
+    position: absolute;
+}
+
+.img{
+    margin-right: 100px;
+}
+
+.loginBtn{
+    width: 120px;
+    height: 40px;
+    color: white;
+    font-weight: bold;
+    display: flex;
+    text-decoration: none;
+    justify-content: center;
+    align-items: center;
+    background-color: #C57B57;
+    border-radius: 20px;
+    cursor: pointer;
+}
